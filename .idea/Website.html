@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <title>Github Website</title>
+     <title>Github Website</title>
 </head>
 <body>
 <div class = "container">
@@ -21,7 +20,7 @@
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
         <div class="btn-group">
-            <button id="submit" type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Get the information"> Enter </button>
+            <button id="submit" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Get the information"> Enter </button>
             <button id="remove" type="button" class="btn btn-primary"> Remove </button>
         </div>
     </form>
@@ -30,10 +29,9 @@
 <script>
     $(document).ready(function() {
         $("#submit").click(function () {
-            $.get("https://api.github.com/user/" + $("#gitname"), function () {
-                alert();
+            $.get("https://api.github.com/users/" + $("#gitname").val(), function(data){
+                alert(data.login);
                 //     alert("api.github.com/user/" + $("#gitname").val());
-
             });
         });
     });
@@ -41,6 +39,7 @@
 
 
 <script>
+
     // Disable form submissions if there are invalid fields
     (function() {
         'use strict';
@@ -60,12 +59,6 @@
         }, false);
     })();
 </script>
-<script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
 
-</div>
 </body>
 </html>
