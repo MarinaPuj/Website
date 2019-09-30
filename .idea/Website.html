@@ -13,7 +13,7 @@
 <div class = "container">
 <h1>Github Website</h1>
 <p>Please enter a Github Username</p>
-    <form action="/action_page.php" class="needs-validation" novalidate>
+    <form class="needs-validation" novalidate>
         <div class="form-group">
             <label for="gitname">Git username:</label>
             <input type="text" class="form-control" id="gitname" placeholder="Enter git username" name="gitname" required>
@@ -21,11 +21,24 @@
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
         <div class="btn-group">
-            <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Get the information"> Enter </button>
-            <button type="button" class="btn btn-primary"> Remove </button>
+            <button id="submit" type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Get the information"> Enter </button>
+            <button id="remove" type="button" class="btn btn-primary"> Remove </button>
         </div>
     </form>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $("#submit").click(function () {
+            $.get("https://api.github.com/user/" + $("#gitname"), function () {
+                alert();
+                //     alert("api.github.com/user/" + $("#gitname").val());
+
+            });
+        });
+    });
+</script>
+
 
 <script>
     // Disable form submissions if there are invalid fields
