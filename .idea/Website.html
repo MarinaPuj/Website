@@ -35,6 +35,17 @@
                 <img src="url" alt="Profile Picture" id = "foto" width="200" height="200">
             </div>
         </div>
+        <div class="col-sm8">
+            <table class="table table-hover" id="tablarepos">
+                <thead>
+                <tr>
+                    <th>Repository Name</th>
+                    <th>Language</th>
+                    <th>Url</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
     </div>
     <br>
     <div class="row">
@@ -87,6 +98,8 @@
             $("#datalocation").empty()
             $("#datamail").empty()
             $("#foto").empty()
+            var contentToRemove = document.querySelectorAll("#lineatabla");
+            $(contentToRemove).remove();
             $.get("https://api.github.com/users/" + $("#gitname").val(), function (data) {
                 $("#datos").show();
                 $("#dataname").append(data.name)
@@ -96,11 +109,36 @@
                 $("#datalocation").append(data.location)
                 $("#datamail").append(data.email)
                 $("#foto").attr("src",data.avatar_url)
+                $.get(data.repos_url, function (datarepos) {
+                    var content = "<tbody>"
+                    for(i=0; i<parseInt(data.public_repos); i++){
+                        content += '<tr id ="lineatabla"><td>' + datarepos[i].name + '</td>'+'<td>' + datarepos[i].language +'</td><td>' + datarepos[i].html_url +'</td></tr>';
+                    }
+                    content += "</tbody>"
+
+                    $('#tablarepos').append(content);
+                });
             });
+        });
+        $("#remove").click(function () {
+            $("#datos").hide();
+            $("#dataname").empty()
+            $("#dataid").empty()
+            $("#datafollowing").empty()
+            $("#datafollowers").empty()
+            $("#datalocation").empty()
+            $("#datamail").empty()
+            $("#foto").empty()
+            var contentToRemove = document.querySelectorAll("#lineatabla");
+            $(contentToRemove).remove();
         });
     });
 </script>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cfebd01fc746e2d2ee855ecff3506e6d7ab0a6d7
 <script>
     // Disable form submissions if there are invalid fields
     (function() {
