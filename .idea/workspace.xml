@@ -8,6 +8,8 @@
       <change afterPath="$PROJECT_DIR$/../figures/src/main/java/edu/upc/eetac/dsa/Quadrat.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../figures/src/main/java/edu/upc/eetac/dsa/Rectangle.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../figures/src/main/java/edu/upc/eetac/dsa/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/com/company/Cercle.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/com/company/Figura.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/com/company/GestorFigures" beforeDir="false" afterPath="$PROJECT_DIR$/../figures/src/main/java/edu/upc/eetac/dsa/GestorFigures" afterDir="false" />
@@ -30,7 +32,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1RPJLcu1z7JZlpwuaDIGbCqZdBW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -38,7 +40,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../figures" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -63,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569562742199</updated>
       <workItem from="1569562745783" duration="3518000" />
+      <workItem from="1569835179965" duration="193000" />
     </task>
     <servers />
   </component>
@@ -74,7 +77,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
