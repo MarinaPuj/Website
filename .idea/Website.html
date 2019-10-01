@@ -21,65 +21,60 @@
         </div>
         <div class="btn-group">
             <button id="submit" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Get the information"> Enter </button>
-            <button id="remove" type="button" class="btn btn-primary"> Remove </button>
+            <button id="remove" type="submit" class="btn btn-primary"> Remove </button>
         </div>
     </form>
 </div>
-<p></p>
-<p></p>
+<br>
+<br>
 <div class="container" id = "datos">
     <div class="row">
-        <div class="col-sm-4" id ="fotoperfilgrid">
-            <img src="url" alt="Profile Picture" id = "foto" width="200" height="200">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6">
+            <div class="col-sm-4" id ="fotoperfilgrid">
+                <img src="url" alt="Profile Picture" id = "foto" width="200" height="200">
+            </div>
         </div>
     </div>
+    <br>
     <div class="row">
-        <div class="col-sm-2">
-            Full Name:
-        </div>
-        <div class="col-sm-2" id = "dataname" >
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2">
-        ID:
-        </div>
-        <div class="col-sm-2" id = dataid>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2">
-            E-mail:
-        </div>
-        <div class="col-sm-2" id = "datamail" >
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2">
-            Location:
-        </div>
-        <div class="col-sm-2" id = datalocation>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2">
-            Following:
-        </div>
-        <div class="col-sm-2" id = "datafollowing" >
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2">
-            Followers:
-        </div>
-        <div class="col-sm-2" id = datafollowers>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <table class="table table-hover">
+                <thead>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Full Name</th>
+                    <td id = "dataname"></td>
+                </tr>
+                <tr>
+                    <th scope="row">ID:</th>
+                    <td id = dataid></td>
+                </tr>
+                <tr>
+                    <th scope="row"> E-mail:</th>
+                    <td id = "datamail"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Location:</th>
+                    <td id = "datalocation"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Following:</th>
+                    <td id = "datafollowing"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Followers:</th>
+                    <td id = "datafollowers"></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
-
-
-<p></p>
-<h6>By Marina & Marc, for DSA</h6>
+<br>
+<p class="small">By Marina & Marc, for <abbr title="Disseny de serveis i aplicacions">DSA</abbr></p>
 
 <script>
     $(document).ready(function() {
@@ -106,11 +101,7 @@
     });
 </script>
 
-
-
-
 <script>
-
     // Disable form submissions if there are invalid fields
     (function() {
         'use strict';
