@@ -33,7 +33,7 @@
             <img src="url" alt="Profile Picture" id = "foto" width="200" height="200">
         </div>
         <div class="col-sm8">
-            <table class="table-compacted" id="tablarepos">
+            <table class="table table-hover" id="tablarepos">
                 <thead>
                 <tr>
                     <th>Repository Name</th>
@@ -125,10 +125,20 @@
                 });
             });
         });
+        $("#remove").click(function () {
+            $("#datos").hide();
+            $("#dataname").empty()
+            $("#dataid").empty()
+            $("#datafollowing").empty()
+            $("#datafollowers").empty()
+            $("#datalocation").empty()
+            $("#datamail").empty()
+            $("#foto").empty()
+            var contentToRemove = document.querySelectorAll("#lineatabla");
+            $(contentToRemove).remove();
+        });
     });
 </script>
-
-
 
 
 <script>
