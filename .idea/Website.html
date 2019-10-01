@@ -32,6 +32,17 @@
         <div class="col-sm-4" id ="fotoperfilgrid">
             <img src="url" alt="Profile Picture" id = "foto" width="200" height="200">
         </div>
+        <div class="col-sm8">
+            <table class="table-compacted" id="tablarepos">
+                <thead>
+                <tr>
+                    <th>Repository Name</th>
+                    <th>Owner</th>
+                    <th>Url</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-2">
@@ -92,6 +103,8 @@
             $("#datalocation").empty()
             $("#datamail").empty()
             $("#foto").empty()
+            var contentToRemove = document.querySelectorAll("#lineatabla");
+            $(contentToRemove).remove();
             $.get("https://api.github.com/users/" + $("#gitname").val(), function (data) {
                 $("#datos").show();
                 $("#dataname").append(data.name)
@@ -101,6 +114,15 @@
                 $("#datalocation").append(data.location)
                 $("#datamail").append(data.email)
                 $("#foto").attr("src",data.avatar_url)
+                $.get(data.repos_url, function (datarepos) {
+                    var content = "<tbody>"
+                    for(i=0; i<parseInt(data.public_repos); i++){
+                        content += '<tr id ="lineatabla"><td>' + datarepos[i].name + '</td>'+'<td>' + datarepos[i].owner.login +'</td><td>' + datarepos[i].html_url +'</td></tr>';
+                    }
+                    content += "</tbody>"
+
+                    $('#tablarepos').append(content);
+                });
             });
         });
     });
