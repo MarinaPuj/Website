@@ -25,17 +25,88 @@
         </div>
     </form>
 </div>
+<p></p>
+<p></p>
+<div class="container" id = "datos">
+    <div class="row">
+        <div class="col-sm-4" id ="fotoperfilgrid">
+            <img src="url" alt="Profile Picture" id = "foto" width="200" height="200">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Full Name:
+        </div>
+        <div class="col-sm-2" id = "dataname" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+        ID:
+        </div>
+        <div class="col-sm-2" id = dataid>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            E-mail:
+        </div>
+        <div class="col-sm-2" id = "datamail" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Location:
+        </div>
+        <div class="col-sm-2" id = datalocation>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Following:
+        </div>
+        <div class="col-sm-2" id = "datafollowing" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Followers:
+        </div>
+        <div class="col-sm-2" id = datafollowers>
+        </div>
+    </div>
+</div>
+
+
+<p></p>
+<h6>By Marina & Marc, for DSA</h6>
 
 <script>
     $(document).ready(function() {
+        $("#datos").hide();
         $("#submit").click(function () {
-            $.get("https://api.github.com/users/" + $("#gitname").val(), function(data){
-                alert(data.login);
-                //     alert("api.github.com/user/" + $("#gitname").val());
+            $("#dataname").empty()
+            $("#dataid").empty()
+            $("#datafollowing").empty()
+            $("#datafollowers").empty()
+            $("#datalocation").empty()
+            $("#datamail").empty()
+            $("#foto").empty()
+            $.get("https://api.github.com/users/" + $("#gitname").val(), function (data) {
+                $("#datos").show();
+                $("#dataname").append(data.name)
+                $("#dataid").append(data.id)
+                $("#datafollowing").append(data.following)
+                $("#datafollowers").append(data.followers)
+                $("#datalocation").append(data.location)
+                $("#datamail").append(data.email)
+                $("#foto").attr("src",data.avatar_url)
             });
         });
     });
 </script>
+
+
 
 
 <script>
@@ -59,6 +130,5 @@
         }, false);
     })();
 </script>
-
 </body>
 </html>
