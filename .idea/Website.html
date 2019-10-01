@@ -37,7 +37,7 @@
                 <thead>
                 <tr>
                     <th>Repository Name</th>
-                    <th>Owner</th>
+                    <th>Language</th>
                     <th>Url</th>
                 </tr>
                 </thead>
@@ -117,7 +117,7 @@
                 $.get(data.repos_url, function (datarepos) {
                     var content = "<tbody>"
                     for(i=0; i<parseInt(data.public_repos); i++){
-                        content += '<tr id ="lineatabla"><td>' + datarepos[i].name + '</td>'+'<td>' + datarepos[i].owner.login +'</td><td>' + datarepos[i].html_url +'</td></tr>';
+                        content += '<tr id ="lineatabla"><td>' + datarepos[i].name + '</td>'+'<td>' + datarepos[i].language +'</td><td>' + datarepos[i].html_url +'</td></tr>';
                     }
                     content += "</tbody>"
 
