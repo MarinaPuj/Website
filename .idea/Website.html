@@ -21,16 +21,16 @@
         </div>
         <div class="btn-group">
             <button id="submit" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Get the information"> Enter </button>
-            <button id="remove" type="button" class="btn btn-primary"> Remove </button>
+            <button id="remove" type="submit" class="btn btn-primary"> Remove </button>
         </div>
     </form>
 </div>
-<p></p>
-<p></p>
+<br>
+<br>
 <div class="container" id = "datos">
     <div class="row">
         <div class="col-sm-4" id ="fotoperfilgrid">
-            <img src="url" alt="Profile Picture" id = "foto" width="200" height="200">
+            <img src="url" alt="Profile Picture" id = "foto" width="300" height="300">
         </div>
         <div class="col-sm8">
             <table class="table table-hover" id="tablarepos">
@@ -53,7 +53,7 @@
     </div>
     <div class="row">
         <div class="col-sm-2">
-        ID:
+            ID:
         </div>
         <div class="col-sm-2" id = dataid>
         </div>
@@ -87,10 +87,8 @@
         </div>
     </div>
 </div>
-
-
-<p></p>
-<h6>By Marina & Marc, for DSA</h6>
+<br>
+<p class="small">By Marina & Marc, for <abbr title="Disseny de serveis i aplicacions">DSA</abbr></p>
 
 <script>
     $(document).ready(function() {
@@ -139,10 +137,7 @@
         });
     });
 </script>
-
-
 <script>
-
     // Disable form submissions if there are invalid fields
     (function() {
         'use strict';
